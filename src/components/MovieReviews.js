@@ -1,4 +1,3 @@
-// Code MovieReviews Here
 import React from "react";
 
 const MovieReviews = ({reviews}) => {

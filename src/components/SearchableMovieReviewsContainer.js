@@ -15,12 +15,14 @@ export default class SearchableMovieReviewsContainer extends Component {
     searchTerm:''
   }
   
+  
   handleChange=(event)=>{
     this.setState({searchTerm:event.target.value});
+
   }
   
   handleSubmit=(e)=>{
-    e.preventDefault();
+    e.preventDefault()
     this.fetchData(this.state.searchTerm)
   }
   
@@ -32,14 +34,21 @@ export default class SearchableMovieReviewsContainer extends Component {
   
   render(){
     return(
+
       <div className="searchable-movie-reviews">
+
+    
+
       <form onSubmit={this.handleSubmit}>
       <input type="text" onChange={this.handleChange} placeholder="search for na book review" required />
       <button type="submit" > search </button>
       </form>
+
           
        <MovieReviews reviews={this.state.reviews} />
       </div>
+
+      
       )
   }
   
