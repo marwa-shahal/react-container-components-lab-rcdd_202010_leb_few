@@ -12,16 +12,28 @@ const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
 export default class SearchableMovieReviewsContainer extends Component {
   state={
     reviews:[],
+<<<<<<< HEAD
     searchTerm:''
   }
   
   handleChange=(event)=>{
     this.setState({searchTerm:event.target.value});
+=======
+    searchInput:''
+  }
+  
+  handleChange=(event)=>{
+    this.setState({searchInput:event.target.value});
+>>>>>>> da20bf9b4a16d26775eac0cd4df51fc8e9acbcf0
   }
   
   handleSubmit=(e)=>{
     e.preventDefault();
+<<<<<<< HEAD
     this.fetchData(this.state.searchTerm)
+=======
+    this.fetchData(this.state.searchInput)
+>>>>>>> da20bf9b4a16d26775eac0cd4df51fc8e9acbcf0
   }
   
   fetchData=(rev)=>{
@@ -32,14 +44,23 @@ export default class SearchableMovieReviewsContainer extends Component {
   
   render(){
     return(
+<<<<<<< HEAD
       <div className="searchable-movie-reviews">
+=======
+      <div>
+>>>>>>> da20bf9b4a16d26775eac0cd4df51fc8e9acbcf0
       <form onSubmit={this.handleSubmit}>
       <input type="text" onChange={this.handleChange} placeholder="search for na book review" required />
       <button type="submit" > search </button>
       </form>
+<<<<<<< HEAD
           
        <MovieReviews reviews={this.state.reviews} />
       </div>
+=======
+       <MovieReviews reviews={this.state.reviews} />
+       </div>
+>>>>>>> da20bf9b4a16d26775eac0cd4df51fc8e9acbcf0
       )
   }
   
